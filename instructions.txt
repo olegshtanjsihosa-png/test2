@@ -1,0 +1,52 @@
+состав проекта
+
+lms_api2 - backend на Django и SQLite
+main3/frontend - frontend на React и Vite
+lms_api2/db.sqlite3 - база с учебными данными
+
+требования
+
+Python 3.10+
+Node.js 20+
+npm
+
+запуск backend
+Откройте терминал в папке проекта.
+
+cd "lms_api2"
+python -m venv venv
+.\venv\Scripts\activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py runserver
+
+Backend будет доступен по адресу:
+http://localhost:8000/api/
+
+запуск frontend
+Откройте второй терминал.
+
+cd "main3\frontend"
+npm install
+npm run dev
+
+Frontend будет доступен по адресу:
+http://localhost:5173/
+
+проверка перед сдачей
+
+cd "lms_api2"
+.\venv\Scripts\activate
+python manage.py check
+
+cd "..\main3\frontend"
+npm run build
+
+Далее нужно либо зарегестрироваться либо можно войти под уже созданных тестовыи акаунтом:
+логин: oleg1
+пароль: oleg1
+
+
+для входа как суперюзер:
+логин: oleg
+пароль: oleg
